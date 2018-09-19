@@ -8,7 +8,7 @@
  *
  *```hcl
  * module "dcos-forwarding-rule-public-agents" {
- *   source  = "terraform-dcos/compute-forwarding-rule-public-agents/gcp"
+ *   source  = "dcos-terraform/compute-forwarding-rule-public-agents/gcp"
  *   version = "~> 0.1"
  *
  *   name_prefix = "production"
@@ -36,7 +36,7 @@ locals {
 }
 
 module "dcos-forwarding-rule-public-agents" {
-  source  = "terraform-dcos/compute-forwarding-rule/gcp"
+  source  = "dcos-terraform/compute-forwarding-rule/gcp"
   version = "~> 0.0"
 
   name_prefix = "${var.name_prefix}"
@@ -44,7 +44,7 @@ module "dcos-forwarding-rule-public-agents" {
   instances_self_link = ["${var.public_agents_self_link}"]
   name_format         = "${var.name_format}"
 
-  rules = "${concat(local.default_rules,var.additional_rules)}"
+  rules = ["${concat(local.default_rules,var.additional_rules)}"]
 
   health_check {
     target = "/_haproxy_health_check"
