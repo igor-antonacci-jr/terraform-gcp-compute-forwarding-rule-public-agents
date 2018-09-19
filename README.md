@@ -1,4 +1,4 @@
-GCP Forwarding Rule - Masters
+GCP Forwarding Rule - Public Agents
 ============
 This module creates an GCP forwarding rule for DC/OS public agents.
 

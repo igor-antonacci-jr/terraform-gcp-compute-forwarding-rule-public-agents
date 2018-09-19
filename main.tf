@@ -1,5 +1,5 @@
 /**
- * GCP Forwarding Rule - Masters
+ * GCP Forwarding Rule - Public Agents
  * ============
  * This module creates an GCP forwarding rule for DC/OS public agents.
  *
@@ -36,9 +36,8 @@ locals {
 }
 
 module "dcos-forwarding-rule-public-agents" {
-  # source  = "terraform-dcos/compute-forwarding-rule/gcp"  # version = "~> 0.0"
-
-  source = "../terraform-gcp-compute-forwarding-rule"
+  source  = "terraform-dcos/compute-forwarding-rule/gcp"
+  version = "~> 0.0"
 
   name_prefix = "${var.name_prefix}"
 
