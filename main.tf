@@ -11,7 +11,7 @@
  *   source  = "dcos-terraform/compute-forwarding-rule-public-agents/gcp"
  *   version = "~> 0.1"
  *
- *   name_prefix = "production"
+ *   cluster_name = "production"
  *
  *   public_agents_self_link = [${"module.public_agents.instances_self_link"}]
  * }
@@ -24,7 +24,7 @@ module "dcos-forwarding-rule-public-agents" {
   source  = "dcos-terraform/compute-forwarding-rule/gcp"
   version = "~> 0.0"
 
-  name_prefix = "${var.name_prefix}"
+  cluster_name = "${var.cluster_name}"
 
   instances_self_link = ["${var.public_agents_self_link}"]
   name_format         = "${var.name_format}"
