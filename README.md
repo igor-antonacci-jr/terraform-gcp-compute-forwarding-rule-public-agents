@@ -23,6 +23,7 @@ module "dcos-forwarding-rule-public-agents" {
 |------|-------------|:----:|:-----:|:-----:|
 | additional_rules | List of additional rules | string | `<list>` | no |
 | cluster_name | Cluster Name | string | - | yes |
+| labels | Add custom labels to all resources | map | `<map>` | no |
 | name_format | printf style format for naming the ELB. Gets truncated to 32 characters. (input cluster_name) | string | `ext-%s` | no |
 | public_agents_self_link | List of public agent instances self links | list | `<list>` | no |
 
