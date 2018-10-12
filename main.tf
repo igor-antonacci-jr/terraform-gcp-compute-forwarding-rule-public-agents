@@ -35,4 +35,6 @@ module "dcos-forwarding-rule-public-agents" {
     target = "/_haproxy_health_check"
     port   = "9090"
   }
+
+  labels = "${var.labels}"
 }
