@@ -9,7 +9,7 @@
  *```hcl
  * module "dcos-forwarding-rule-public-agents" {
  *   source  = "dcos-terraform/compute-forwarding-rule-public-agents/gcp"
- *   version = "~> 0.1"
+ *   version = "~> 0.1.0"
  *
  *   cluster_name = "production"
  *
