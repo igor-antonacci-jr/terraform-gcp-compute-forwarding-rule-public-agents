@@ -36,5 +36,9 @@ module "dcos-forwarding-rule-public-agents" {
     port   = "9090"
   }
 
-  labels = "${var.labels}"
+  labels = "${var.labels}"  
+
+  providers = {
+    google = "google"
+  }
 }
