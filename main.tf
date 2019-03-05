@@ -37,4 +37,8 @@ module "dcos-forwarding-rule-public-agents" {
   }
 
   labels = "${var.labels}"
+
+  providers = {
+    google = "google"
+  }
 }
