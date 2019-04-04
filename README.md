@@ -16,20 +16,19 @@ module "dcos-forwarding-rule-public-agents" {
 }
 ```
 
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| additional_rules | List of additional rules | string | `<list>` | no |
-| cluster_name | Name of the DC/OS cluster | string | - | yes |
+| additional\_rules | List of additional rules | list | `<list>` | no |
+| cluster\_name | Name of the DC/OS cluster | string | n/a | yes |
 | labels | Add custom labels to all resources | map | `<map>` | no |
-| name_format | printf style format for naming the ELB. Gets truncated to 32 characters. (input cluster_name) | string | `ext-%s` | no |
-| public_agents_self_link | List of public agent instances self links | list | `<list>` | no |
+| name\_format | printf style format for naming the ELB. Gets truncated to 32 characters. (input cluster_name) | string | `"ext-%s"` | no |
+| public\_agents\_self\_link | List of public agent instances self links | list | `<list>` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| ip_address | Load balancer ip address |
+| ip\_address | Load balancer ip address |
 
