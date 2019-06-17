@@ -28,6 +28,8 @@ module "dcos-forwarding-rule-public-agents" {
 
   instances_self_link = ["${var.public_agents_self_link}"]
   name_format         = "${var.name_format}"
+  disable             = "${var.disable}"
+  name_prefix         = "${var.name_prefix}"
 
   additional_rules = ["${var.additional_rules}"]
 
