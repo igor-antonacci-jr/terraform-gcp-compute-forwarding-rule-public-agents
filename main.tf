@@ -35,6 +35,7 @@ module "dcos-forwarding-rule-public-agents" {
 
   health_check {
     target = "/_haproxy_health_check"
+    request_path = "/_haproxy_health_check"
     port   = "9090"
   }
 
